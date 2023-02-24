@@ -29,13 +29,13 @@
 	path = vim/pack/colors/start/gruvbox
 	url = git@github.com:morhetz/gruvbox.git
 [submodule "vim/pack/plugins/start/VimCompletesMe"]
-	path = vim/pack/plugins/start/VimCompletesMe
+	path = vim/pack/plugins/opt/VimCompletesMe
 	url = git@github.com:ackyshake/VimCompletesMe.git
 [submodule "vim/pack/plugins/start/jedi-vim"]
-	path = vim/pack/plugins/start/jedi-vim
+	path = vim/pack/plugins/opt/jedi-vim
 	url = git@github.com:davidhalter/jedi-vim.git
 [submodule "vim/pack/plugins/start/vim-snipmate"]
-	path = vim/pack/plugins/start/vim-snipmate
+	path = vim/pack/plugins/opt/vim-snipmate
 	url = git@github.com:garbas/vim-snipmate.git
 [submodule "vim/pack/plugins/start/vim-addon-mw-utils"]
 	path = vim/pack/plugins/start/vim-addon-mw-utils
@@ -55,3 +55,9 @@
 [submodule "vim/pack/plugins/start/tmuxline.vim"]
 	path = vim/pack/plugins/start/tmuxline.vim
 	url = git@github.com:edkolev/tmuxline.vim.git
+[submodule "vim/pack/plugins/start/vim-surround"]
+	path = vim/pack/plugins/start/vim-surround
+	url = git@github.com:tpope/vim-surround.git
+[submodule "vim/pack/plugins/start/ultisnips"]
+	path = vim/pack/plugins/opt/ultisnips
+	url = git@github.com:SirVer/ultisnips.git

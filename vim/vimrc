@@ -8,6 +8,11 @@ let g:jedi#popup_on_dot = 0
 " SnipMate
 let g:snipMate = { 'snippet_version' : 1 }
 
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 " Python settings for *.py files
 let g:python_recommended_style = 0
 au FileType python setl
