@@ -5,8 +5,9 @@ let g:airline_theme = 'ayu_dark'
 " Jedi
 let g:jedi#popup_on_dot = 0
 
-" SnipMate
-let g:snipMate = { 'snippet_version' : 1 }
+" SuperTab
+let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabContextDefaultCompletionType = '<C-X><C-O>'
 
 " Python settings for *.py files
 let g:python_recommended_style = 0
@@ -20,7 +21,6 @@ au FileType python setl
     \ autoindent
     \ number
     \ fileformat=unix
-au FileType python let b:vcm_tab_complete = 'omni'
 
 " TeX settings
 let g:tex_flavor = 'latex'
