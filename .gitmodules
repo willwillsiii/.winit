@@ -28,15 +28,9 @@
 [submodule "vim/pack/colors/start/gruvbox"]
 	path = vim/pack/colors/start/gruvbox
 	url = git@github.com:morhetz/gruvbox.git
-[submodule "vim/pack/plugins/start/VimCompletesMe"]
-	path = vim/pack/plugins/opt/VimCompletesMe
-	url = git@github.com:ackyshake/VimCompletesMe.git
 [submodule "vim/pack/plugins/start/jedi-vim"]
-	path = vim/pack/plugins/opt/jedi-vim
+	path = vim/pack/plugins/start/jedi-vim
 	url = git@github.com:davidhalter/jedi-vim.git
-[submodule "vim/pack/plugins/start/vim-snipmate"]
-	path = vim/pack/plugins/opt/vim-snipmate
-	url = git@github.com:garbas/vim-snipmate.git
 [submodule "vim/pack/plugins/start/vim-addon-mw-utils"]
 	path = vim/pack/plugins/start/vim-addon-mw-utils
 	url = git@github.com:MarcWeber/vim-addon-mw-utils.git
@@ -59,5 +53,8 @@
 	path = vim/pack/plugins/start/vim-surround
 	url = git@github.com:tpope/vim-surround.git
 [submodule "vim/pack/plugins/start/ultisnips"]
-	path = vim/pack/plugins/opt/ultisnips
+	path = vim/pack/plugins/start/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
+[submodule "vim/pack/plugins/start/supertab"]
+	path = vim/pack/plugins/start/supertab
+	url = git@github.com:ervandew/supertab.git
