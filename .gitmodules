@@ -1,63 +1,63 @@
 [submodule "vim/pack/plugins/start/vim-fugitive"]
 	path = vim/pack/plugins/start/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/pack/plugins/start/command-t"]
 	path = vim/pack/plugins/start/command-t
-	url = git@github.com:wincent/command-t.git
+	url = https://github.com/wincent/command-t.git
 [submodule "vim/pack/plugins/start/SimpylFold"]
 	path = vim/pack/plugins/start/SimpylFold
-	url = git@github.com:tmhedberg/SimpylFold.git
+	url = https://github.com/tmhedberg/SimpylFold.git
 [submodule "vim/pack/plugins/start/indent.python.vim"]
 	path = vim/pack/plugins/start/indentpython.vim
-	url = git@github.com:vim-scripts/indentpython.vim.git
+	url = https://github.com/vim-scripts/indentpython.vim.git
 [submodule "vim/pack/colors/start/vim-colors-solarized"]
 	path = vim/pack/colors/start/vim-colors-solarized
-	url = git@github.com:altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/pack/colors/start/ayu-vim"]
 	path = vim/pack/colors/start/ayu-vim
-	url = git@github.com:ayu-theme/ayu-vim.git
+	url = https://github.com/ayu-theme/ayu-vim.git
 [submodule "vim/pack/colors/start/Apprentice"]
 	path = vim/pack/colors/start/Apprentice
-	url = git@github.com:romainl/Apprentice.git
+	url = https://github.com/romainl/Apprentice.git
 [submodule "vim/pack/colors/start/badwolf"]
 	path = vim/pack/colors/start/badwolf
-	url = git@github.com:sjl/badwolf.git
+	url = https://github.com/sjl/badwolf.git
 [submodule "vim/pack/colors/start/jellybeans.vim"]
 	path = vim/pack/colors/start/jellybeans.vim
-	url = git@github.com:nanotech/jellybeans.vim.git
+	url = https://github.com/nanotech/jellybeans.vim.git
 [submodule "vim/pack/colors/start/gruvbox"]
 	path = vim/pack/colors/start/gruvbox
-	url = git@github.com:morhetz/gruvbox.git
+	url = https://github.com/morhetz/gruvbox.git
 [submodule "vim/pack/plugins/start/jedi-vim"]
 	path = vim/pack/plugins/start/jedi-vim
-	url = git@github.com:davidhalter/jedi-vim.git
+	url = https://github.com/davidhalter/jedi-vim.git
 [submodule "vim/pack/plugins/start/vim-addon-mw-utils"]
 	path = vim/pack/plugins/start/vim-addon-mw-utils
-	url = git@github.com:MarcWeber/vim-addon-mw-utils.git
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "vim/pack/plugins/start/tlib_vim"]
 	path = vim/pack/plugins/start/tlib_vim
-	url = git@github.com:tomtom/tlib_vim.git
+	url = https://github.com/tomtom/tlib_vim.git
 [submodule "vim/pack/plugins/start/vim-snippets"]
 	path = vim/pack/plugins/start/vim-snippets
-	url = git@github.com:honza/vim-snippets.git
+	url = https://github.com/honza/vim-snippets.git
 [submodule "vim/pack/plugins/start/vim-airline"]
 	path = vim/pack/plugins/start/vim-airline
-	url = git@github.com:vim-airline/vim-airline.git
+	url = https://github.com/vim-airline/vim-airline.git
 [submodule "vim/pack/plugins/start/vim-airline-themes"]
 	path = vim/pack/plugins/start/vim-airline-themes
-	url = git@github.com:vim-airline/vim-airline-themes.git
+	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "vim/pack/plugins/start/tmuxline.vim"]
 	path = vim/pack/plugins/start/tmuxline.vim
-	url = git@github.com:edkolev/tmuxline.vim.git
+	url = https://github.com/edkolev/tmuxline.vim.git
 [submodule "vim/pack/plugins/start/vim-surround"]
 	path = vim/pack/plugins/start/vim-surround
-	url = git@github.com:tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
 [submodule "vim/pack/plugins/start/ultisnips"]
 	path = vim/pack/plugins/start/ultisnips
-	url = git@github.com:SirVer/ultisnips.git
+	url = https://github.com/SirVer/ultisnips.git
 [submodule "vim/pack/plugins/start/supertab"]
 	path = vim/pack/plugins/start/supertab
-	url = git@github.com:ervandew/supertab.git
+	url = https://github.com/ervandew/supertab.git
 [submodule "vim/pack/plugins/start/vim-unimpaired"]
 	path = vim/pack/plugins/start/vim-unimpaired
-	url = git@github.com:tpope/vim-unimpaired.git
+	url = https://github.com/tpope/vim-unimpaired.git
