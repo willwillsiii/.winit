@@ -1,0 +1,63 @@
+" vim-airline settings
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'ayu_dark'
+
+" Jedi
+let g:jedi#popup_on_dot = 0
+
+" SnipMate
+let g:snipMate = { 'snippet_version' : 1 }
+
+" Python settings for *.py files
+let g:python_recommended_style = 0
+au FileType python setl
+    \ tabstop=8
+    \ softtabstop=4
+    \ shiftwidth=4
+    \ textwidth=79
+    \ colorcolumn=72,+1
+    \ expandtab
+    \ autoindent
+    \ number
+    \ fileformat=unix
+au FileType python let b:vcm_tab_complete = 'omni'
+
+" TeX settings
+let g:tex_flavor = 'latex'
+au FileType tex setl indentexpr=
+
+" General settings
+set encoding=utf-8
+syntax enable
+set number
+
+" Colors
+set t_Co=256
+set background=dark
+let g:solarized_termcolors = 256
+let g:ayucolor = 'dark'
+"let ayucolor="mirage"
+"let ayucolor="light"
+" Inspect $TERM instad of t_Co as it works in neovim as well
+if &term =~ '256color'
+    " Enable true (24-bit) colors instead of (8-bit) 256 colors.
+    " :h true-color
+    if has('termguicolors')
+        " The next lines fix color problems when using tmux.
+        " See https://stackoverflow.com/questions/62071974/vim-termguicolors-with-xterm-true-color-still-causing-problems
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+        " The next line is required for most colorschemes to look nice,
+        " but messes up the solarized colorscheme.
+        set termguicolors
+    endif
+    colorscheme ayu
+    "colorscheme jellybeans
+    "colorscheme gruvbox
+    "colorscheme badwolf
+    "colorscheme apprentice
+else
+    " Fallback to solarized if termguicolors can't be set.
+    colorscheme solarized
+endif
+
