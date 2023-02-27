@@ -1,5 +1,7 @@
 #!/bin/bash
 
+safe_link () {
+
 SRC=~/.winit/.ssh/config
 DEST=~/.ssh/config
 
@@ -11,3 +13,5 @@ fi
 
 # Create the symlink
 ln -s "$SRC" "$DEST"
+
+}
