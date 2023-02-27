@@ -2,16 +2,16 @@
 
 safe_link () {
 
-SRC=~/.winit/.ssh/config
-DEST=~/.ssh/config
+  SRC=$1
+  DEST=$2
 
-# Check if the destination file already exists
-if [ -e "$DEST" ]; then
-  # If it does, move it to a backup file
-  mv "$DEST" "$DEST.bak"
-fi
-
-# Create the symlink
-ln -s "$SRC" "$DEST"
+  if ! [[ -L "$DEST" ]]; then
+    ln -sbf --suffix=".bak" $SRC $DEST
+  else
+    ln -sf $SRC $DEST
+  fi
 
 }
+
+safe_link ~/.winit/.ssh/config ~/.ssh/config
+safe_link ~/.winit/vim/vimrc ~/.vimrc
