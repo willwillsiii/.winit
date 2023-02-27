@@ -61,3 +61,42 @@
 [submodule "vim/pack/plugins/start/vim-unimpaired"]
 	path = vim/pack/plugins/start/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
+[submodule "vim/pack/plugins/start/vim-indent-guides"]
+	path = vim/pack/plugins/start/vim-indent-guides
+	url = git@github.com:preservim/vim-indent-guides.git
+[submodule "vim/pack/plugins/start/vim-signify"]
+	path = vim/pack/plugins/start/vim-signify
+	url = git@github.com:mhinz/vim-signify.git
+[submodule "vim/pack/plugins/start/vim-flake8"]
+	path = vim/pack/plugins/start/vim-flake8
+	url = git@github.com:nvie/vim-flake8.git
+[submodule "vim/pack/plugins/start/vim-git"]
+	path = vim/pack/plugins/start/vim-git
+	url = git@github.com:tpope/vim-git.git
+[submodule "vim/pack/plugins/start/pytest.vim"]
+	path = vim/pack/plugins/start/pytest.vim
+	url = git@github.com:alfredodeza/pytest.vim.git
+[submodule "vim/pack/plugins/start/vim-plugin-minibufexpl"]
+	path = vim/pack/plugins/start/vim-plugin-minibufexpl
+	url = git@github.com:weynhamz/vim-plugin-minibufexpl.git
+[submodule "vim/pack/plugins/start/vim-makegreen"]
+	path = vim/pack/plugins/start/vim-makegreen
+	url = git@github.com:reinh/vim-makegreen.git
+[submodule "vim/pack/plugins/start/pydoc.vim"]
+	path = vim/pack/plugins/start/pydoc.vim
+	url = git@github.com:fs111/pydoc.vim.git
+[submodule "vim/pack/plugins/start/undotree"]
+	path = vim/pack/plugins/start/undotree
+	url = git@github.com:mbbill/undotree.git
+[submodule "vim/pack/plugins/start/TaskList.vim"]
+	path = vim/pack/plugins/start/TaskList.vim
+	url = git@github.com:vim-scripts/TaskList.vim.git
+[submodule "vim/pack/plugins/start/nerdtree"]
+	path = vim/pack/plugins/start/nerdtree
+	url = git@github.com:preservim/nerdtree.git
+[submodule "vim/pack/plugins/start/nerdtree-buffer-ops"]
+	path = vim/pack/plugins/start/nerdtree-buffer-ops
+	url = git@github.com:PhilRunninger/nerdtree-buffer-ops.git
+[submodule "vim/pack/plugins/start/nerdtree-visual-selection"]
+	path = vim/pack/plugins/start/nerdtree-visual-selection
+	url = git@github.com:PhilRunninger/nerdtree-visual-selection.git
