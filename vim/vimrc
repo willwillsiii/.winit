@@ -52,7 +52,11 @@ set encoding=utf-8
 syntax enable
 set number
 set foldlevel=99
-set mouse=a
+"set mouse=a
+set wrap
+set linebreak
+set hidden
+set wildmenu
 set splitbelow
 set splitright
 
