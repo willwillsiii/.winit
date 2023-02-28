@@ -13,7 +13,7 @@ let g:miniBufExplBuffersNeeded = 2
 nnoremap <Leader>f :NERDTreeToggle<CR>
 
 " Undotree
-nnoremap <F5> :UndotreeToggle<CR>
+nnoremap <Leader>u :UndotreeToggle<CR>
 
 " TaskList
 nmap <Leader>d <Plug>TaskList
@@ -40,6 +40,7 @@ au FileType python setl
     \ autoindent
     \ number
     \ fileformat=unix
+au FileType python nmap <buffer> <Leader>q :call flake8#Flake8()<CR>
 au BufWritePost *.py call flake8#Flake8()
 
 " TeX settings
@@ -51,6 +52,7 @@ set encoding=utf-8
 syntax enable
 set number
 set foldlevel=99
+set mouse=a
 set splitbelow
 set splitright
 
