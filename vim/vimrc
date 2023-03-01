@@ -1,3 +1,17 @@
+" Important settings
+set nocompatible
+filetype indent plugin on
+" Setting syntax might cause vim to overwrite settings.
+" See below:
+" https://stackoverflow.com/questions/33380451/is-there-a-difference-between-syntax-on-and-syntax-enable-in-vimscript
+if !exists(g:syntax_on)
+    syntax enable
+endif
+" Modeline is disabled for security reasons.
+" See below:
+" https://security.stackexchange.com/questions/36001/vim-modeline-vulnerabilities
+set nomodeline
+
 " vim-airline settings
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'ayu_dark'
@@ -22,6 +36,12 @@ nmap <Leader>d <Plug>TaskList
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabContextDefaultCompletionType = '<C-X><C-O>'
 
+" EasyEscape
+let g:easyescape_chars = { ';': 1, 'l': 1 }
+let g:easyescape_timeout = 100
+cnoremap ;l <ESC>
+cnoremap l; <ESC>
+
 " Jedi
 let g:jedi#popup_on_dot = 0
 
@@ -29,6 +49,8 @@ let g:jedi#popup_on_dot = 0
 let g:pytest_executable = "/home/will/.pyenv/shims/pytest"
 
 " Python settings for *.py files
+" Some are redundant to allow changes to the general settings to not affect
+" python settings. 
 let g:python_recommended_style = 0
 au FileType python setl
     \ tabstop=8
@@ -49,18 +71,36 @@ au FileType tex setl indentexpr=
 
 " General settings
 set encoding=utf-8
-syntax enable
-set number
-set foldlevel=99
+set hidden
+set wildmenu
+set showcmd
+set ignorecase
+set smartcase
+set backspace=indent,eol,start
+set autoindent
+set nostartofline
+set ruler
+"set confirm
+"set visualbell
+"set t_vb=
 "set mouse=a
+"set cmdheight=2
+set number
+set notimeout ttimeout ttimeoutlen=200
+set pastetoggle=<C-P>
+set tabstop=8
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set foldlevel=99
 set wrap
 set linebreak
-set hidden
 set wildmenu
 set splitbelow
 set splitright
 
 " General bindings
+map Y y$
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
