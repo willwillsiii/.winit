@@ -14,7 +14,12 @@ set nomodeline
 
 " Vimux
 nnoremap <Leader>vp :VimuxPromptCommand<CR>
-nnoremap <Leader>vl :VimuxPromptCommand<CR>
+nnoremap <Leader>vl :VimuxRunLastCommand<CR>
+nnoremap <Leader>vi :VimuxInspectRunner<CR>
+nnoremap <Leader>vq :VimuxCloseRunner<CR>
+nnoremap <Leader>vc :VimuxInterruptRunner<CR>
+nnoremap <Leader>vz :VimuxZoomRunner<CR>
+nnoremap <Leader>v<C-l> :VimuxClearTerminalScreen<CR>
 
 " Command-T
 let g:CommandTPreferredImplementation = 'ruby'
