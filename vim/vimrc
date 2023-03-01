@@ -12,9 +12,9 @@ endif
 " https://security.stackexchange.com/questions/36001/vim-modeline-vulnerabilities
 set nomodeline
 
-" vim-airline settings
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'ayu_dark'
+" Vimux
+nnoremap <Leader>vp :VimuxPromptCommand<CR>
+nnoremap <Leader>vl :VimuxPromptCommand<CR>
 
 " Command-T
 let g:CommandTPreferredImplementation = 'ruby'
@@ -30,7 +30,7 @@ nnoremap <Leader>f :NERDTreeToggle<CR>
 nnoremap <Leader>u :UndotreeToggle<CR>
 
 " TaskList
-nmap <Leader>d <Plug>TaskList
+nnoremap <Leader>d <Plug>TaskList
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = 'context'
@@ -40,13 +40,39 @@ let g:SuperTabContextDefaultCompletionType = '<C-X><C-O>'
 let g:easyescape_chars = { ';': 1, 'l': 1 }
 let g:easyescape_timeout = 100
 cnoremap ;l <ESC>
-cnoremap l; <ESC>
+"cnoremap l; <ESC>
+
+" Vim Markdown
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_strikethrough = 1
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_autowrite = 0
+let g:vim_markdown_edit_url_in = 'vsplit'
+
+" Indent Guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_color_change_percent = 4
+let g:indent_guides_guide_size = 2
+let g:indent_guides_start_level = 1
 
 " Jedi
 let g:jedi#popup_on_dot = 0
 
 " Pytest
 let g:pytest_executable = "/home/will/.pyenv/shims/pytest"
+" Invoke Pytest with :Pytest along with an argument:
+"     class, method, function, file, project
+" These actions can be bound like so:
+" nnoremap <silent><Leader>c <ESC>:Pytest file<CR>
+
+" Vim-cellmode
+let g:cellmode_default_mappings='0'
+let g:cellmode_tmux_sessionname=''
+let g:cellmode_tmux_windowname=''
+let g:cellmode_tmux_panenumber='0'
 
 " Python settings for *.py files
 " Some are redundant to allow changes to the general settings to not affect
@@ -106,14 +132,23 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
 nnoremap <Space> za
+nnoremap <silent> vv <C-W>v
 
 " Colors
 set t_Co=256
 set background=dark
 let g:solarized_termcolors = 256
+"let ayucolor = 'light'
+"let ayucolor = 'mirage'
 let g:ayucolor = 'dark'
-"let ayucolor="mirage"
-"let ayucolor="light"
+let g:ayu_italic_comment = 0
+let g:ayu_sign_contrast = 1
+let g:ayu_extended_palette = 1
+" vim-airline settings
+let g:airline_powerline_fonts = 1
+"let g:airline_theme = 'ayu_light'
+"let g:airline_theme = 'ayu_mirage'
+let g:airline_theme = 'ayu_dark'
 " Inspect $TERM instad of t_Co as it works in neovim as well
 if &term =~ '256color'
     " Enable true (24-bit) colors instead of (8-bit) 256 colors.
@@ -127,6 +162,7 @@ if &term =~ '256color'
         " but messes up the solarized colorscheme.
         set termguicolors
     endif
+    packadd ayu-vim
     colorscheme ayu
     "colorscheme jellybeans
     "colorscheme gruvbox

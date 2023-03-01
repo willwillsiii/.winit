@@ -15,7 +15,7 @@
 	url = git@github.com:altercation/vim-colors-solarized.git
 [submodule "vim/pack/colors/start/ayu-vim"]
 	path = vim/pack/colors/start/ayu-vim
-	url = git@github.com:ayu-theme/ayu-vim.git
+	url = git@github.com:Luxed/ayu-vim.git
 [submodule "vim/pack/colors/start/Apprentice"]
 	path = vim/pack/colors/start/Apprentice
 	url = git@github.com:romainl/Apprentice.git
@@ -109,3 +109,21 @@
 [submodule "vim/pack/plugins/start/vim-easyescape"]
 	path = vim/pack/plugins/start/vim-easyescape
 	url = git@github.com:zhou13/vim-easyescape.git
+[submodule "vim/pack/plugins/start/tabular"]
+	path = vim/pack/plugins/start/tabular
+	url = git@github.com:godlygeek/tabular.git
+[submodule "vim/pack/plugins/start/vimux"]
+	path = vim/pack/plugins/start/vimux
+	url = git@github.com:preservim/vimux.git
+[submodule "vim/pack/plugins/start/vim-cellmode"]
+	path = vim/pack/plugins/start/vim-cellmode
+	url = git@github.com:julienr/vim-cellmode.git
+[submodule "vim/pack/colors/start/vim-colors_atelier-schemes"]
+	path = vim/pack/colors/start/vim-colors_atelier-schemes
+	url = git@github.com:atelierbram/vim-colors_atelier-schemes.git
+[submodule "vim/pack/plugins/start/vim-plugin-AnsiEsc"]
+	path = vim/pack/plugins/start/vim-plugin-AnsiEsc
+	url = git@github.com:powerman/vim-plugin-AnsiEsc.git
+[submodule "vim/pack/plugins/start/vim-commentary"]
+	path = vim/pack/plugins/start/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
