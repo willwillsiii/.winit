@@ -15,7 +15,8 @@
 	url = git@github.com:altercation/vim-colors-solarized.git
 [submodule "vim/pack/colors/start/ayu-vim"]
 	path = vim/pack/colors/start/ayu-vim
-	url = git@github.com:Luxed/ayu-vim.git
+	url = git@github.com:willwillsiii/ayu-vim.git
+	branch = tabline_with_original_colors
 [submodule "vim/pack/colors/start/Apprentice"]
 	path = vim/pack/colors/start/Apprentice
 	url = git@github.com:romainl/Apprentice.git
@@ -127,3 +128,8 @@
 [submodule "vim/pack/plugins/start/vim-commentary"]
 	path = vim/pack/plugins/start/vim-commentary
 	url = git@github.com:tpope/vim-commentary.git
+[submodule "vim/pack/plugins/start/markdown-preview.nvim"]
+	path = vim/pack/plugins/start/markdown-preview.nvim
+	url = git@github.com:iamcco/markdown-preview.nvim.git
+	branch = dependabot/npm_and_yarn/next-12.1.0
+	ignore = dirty

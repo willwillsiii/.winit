@@ -2,14 +2,12 @@
 set nocompatible
 filetype indent plugin on
 " Setting syntax might cause vim to overwrite settings.
-" See below:
-" https://stackoverflow.com/questions/33380451/is-there-a-difference-between-syntax-on-and-syntax-enable-in-vimscript
+" See: https://stackoverflow.com/questions/33380451/is-there-a-difference-between-syntax-on-and-syntax-enable-in-vimscript
 if !exists(g:syntax_on)
     syntax enable
 endif
 " Modeline is disabled for security reasons.
-" See below:
-" https://security.stackexchange.com/questions/36001/vim-modeline-vulnerabilities
+" See: https://security.stackexchange.com/questions/36001/vim-modeline-vulnerabilities
 set nomodeline
 
 " Vimux
@@ -48,6 +46,7 @@ cnoremap ;l <ESC>
 "cnoremap l; <ESC>
 
 " Vim Markdown
+set conceallevel=2
 let g:vim_markdown_math = 1
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_toml_frontmatter = 1
@@ -58,7 +57,7 @@ let g:vim_markdown_autowrite = 0
 let g:vim_markdown_edit_url_in = 'vsplit'
 
 " Indent Guides
-let g:indent_guides_enable_on_vim_startup = 1
+au Filetype vim,python :IndentGuidesEnable
 let g:indent_guides_color_change_percent = 4
 let g:indent_guides_guide_size = 2
 let g:indent_guides_start_level = 1
@@ -118,7 +117,7 @@ set ruler
 "set cmdheight=2
 set number
 set notimeout ttimeout ttimeoutlen=200
-set pastetoggle=<C-P>
+"set pastetoggle=<C-P>
 set tabstop=8
 set shiftwidth=4
 set softtabstop=4
@@ -160,13 +159,15 @@ if &term =~ '256color'
     " :h true-color
     if has('termguicolors')
         " The next lines fix color problems when using tmux.
-        " See https://stackoverflow.com/questions/62071974/vim-termguicolors-with-xterm-true-color-still-causing-problems
+        " See: https://stackoverflow.com/questions/62071974/vim-termguicolors-with-xterm-true-color-still-causing-problems
         let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
         let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
         " The next line is required for most colorschemes to look nice,
         " but messes up the solarized colorscheme.
         set termguicolors
     endif
+    " Packadd required here
+    " See: https://github.com/Luxed/ayu-vim/issues/26
     packadd ayu-vim
     colorscheme ayu
     "colorscheme jellybeans
@@ -178,3 +179,10 @@ else
     colorscheme solarized
 endif
 
+function! SourceIfExists(file)
+    if filereadable(expand(a:file))
+        exe 'source' a:file
+    endif
+endfunction
+
+call SourceIfExists("~/.vimrc_local")
