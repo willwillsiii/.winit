@@ -33,7 +33,7 @@ nnoremap <Leader>f :NERDTreeToggle<CR>
 nnoremap <Leader>u :UndotreeToggle<CR>
 
 " TaskList
-nnoremap <Leader>d <Plug>TaskList
+nmap <Leader>d <Plug>TaskList
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = 'context'
@@ -57,7 +57,7 @@ let g:vim_markdown_autowrite = 0
 let g:vim_markdown_edit_url_in = 'vsplit'
 
 " Indent Guides
-au Filetype vim,python :IndentGuidesEnable
+au Filetype vim,python,sh :IndentGuidesEnable
 let g:indent_guides_color_change_percent = 4
 let g:indent_guides_guide_size = 2
 let g:indent_guides_start_level = 1
