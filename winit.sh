@@ -6,14 +6,14 @@
 cd "$(dirname "$0")"
 
 use_defaults () {
-
     run=true
     confirm=false
-    overwrite=false
     revert=false
     verbosity=1
-
+    backup_suffix='.bak'
 }
+
+use_defaults
 
 # This is used to parse arguments.
 # TODO: perhaps use getopt(s) to do this.
@@ -29,10 +29,10 @@ while [ "$#" -ge 1 ]; do
             verbosity=2
             ;;
         -c)
-            overwrite='confirm'
+            confirm=true
             ;;
         -f)
-            overwrite=true
+            confirm=false
             ;;
         -s)
             run=false
@@ -53,12 +53,12 @@ run_cmd () {
 
     CMD="$@"
 
-    if ! [ "${run:-true}" = false ]; then
-        $CMD
+    if [ "$verbosity" -ge 2 ]; then
+        echo $CMD
     fi
 
-    if [ "${verbosity:-1}" -ge 2 ]; then
-        echo $CMD
+    if ! [ "$run" = false ]; then
+        $CMD
     fi
 
 }
@@ -68,9 +68,24 @@ say () {
 
     string="$@"
 
-    if [ "${verbosity:-1}" -ge 1 ]; then
+    if [ "$verbosity" -ge 1 ]; then
         echo "$string"
     fi
+
+}
+
+find_last_backup (){
+
+    num=''
+    orig="$1"
+    backup_file="${orig}${backup_suffix}"
+    last_backup="$orig"
+
+    while [ -e "$backup_file" ]; do
+        last_backup="$backup_file"
+        num=$((num + 1))
+        backup_file="${orig}${backup_suffix}${num}"
+    done
 
 }
 
@@ -78,28 +93,24 @@ say () {
 # that safelink would otherwise overwite.
 backup () {
 
-    suffix='.bak'
-    num=''
-    orig=$1
-    back="${orig}${suffix}"
+    orig="$1"
 
-    while [ -e "$back" ]; do
-        num=$((num + 1))
-        back="${orig}${suffix}${num}"
-    done
+    find_last_backup "$orig"
 
-    run_cmd cp -i "$src" "$dest"
+    run_cmd cp -i "$src" "$backup_file"
 
 }
 
 # TODO: rewrite to use backups function
 safe_link () {
 
-    src=$(realpath -s $1)
-    dest=$(realpath -s $2)
+    src="$(realpath -s "$1")"
+    dest="$(realpath -s "$2")"
 
     if [ -L "$dest" ]; then
-        existing_src="$(readlink $dest)"
+
+        existing_src="$(readlink "$dest")"
+
         if ! [ "$existing_src" = "$src" ]; then
             say "$dest currently linked to $existing_src"
             say "Linking $dest to $src ..."
@@ -108,6 +119,7 @@ safe_link () {
         else
             say "$dest is already linked to $src"
         fi
+
     else
         say "No link found at $dest"
         # TODO: add more say commands for verbosity.
@@ -121,10 +133,9 @@ safe_link () {
 # TODO: add functionality to reinstate backed up files
 safe_link_revert () {
 
-    src=$(realpath -s $1)
-    dest=$(realpath -s $2)
-
-    existing_src="$(readlink $dest)"
+    src="$(realpath -s "$1")"
+    dest="$(realpath -s "$2")"
+    existing_src="$(readlink "$dest")"
 
     # TODO: rewrite to be more explicit about existing files.
     if [ "$src" = "$existing_src" ]; then
