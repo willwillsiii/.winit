@@ -3,9 +3,12 @@
 cd "$(dirname "$0")"
 
 run=true
+overwrite=false
+delete=false
 verbosity=1
 
 # This is used to parse arguments.
+# TODO: perhaps use getopt(s) to do this.
 while [ "$#" -ge 1 ]; do
     case "$1" in
         -q)
@@ -14,10 +17,15 @@ while [ "$#" -ge 1 ]; do
         -v)
             verbosity=2
             ;;
+        # TODO: Add overwrite case (-f)
         -s)
             run=false
             verbosity=2
             ;;
+        -d)
+            delete=true
+        # TODO: Add a confirm option
+        # TODO: Add cases for various configurations of plugins
     esac
     shift
 done
@@ -50,6 +58,8 @@ say () {
 
 }
 
+# This is used to generate backups of existing files
+# that safelink would otherwise overwite.
 backup () {
 
     suffix='.bak'
@@ -62,10 +72,11 @@ backup () {
         back="${orig}${suffix}${num}"
     done
 
-    run_cmd cp -i \"$src\" \"$dest\"
+    run_cmd cp -i "$src" "$dest"
 
 }
 
+# TODO: rewrite to use backups function
 safe_link () {
 
     src=$(realpath -s $1)
@@ -88,6 +99,23 @@ safe_link () {
 
 }
 
+# Use this to remove the links if the src and dest match
+# given arguments.
+safe_link_rm () {
+
+    src=$(realpath -s $1)
+    dest=$(realpath -s $2)
+
+    existing_src="$(readlink $dest)"
+
+    # TODO: rewrite to be more explicit about existing files.
+    if [ "$src" = "$existing_src" ]; then
+        true
+    fi
+
+}
+
+# TODO: rework to store these pairs in an iterable way
 safe_link "./.ssh/config" "${HOME}/.ssh/config"
 safe_link "./vim/vimrc" "${HOME}/.vimrc"
 safe_link "./tmux/tmux.conf" "${HOME}/.tmux.conf"
