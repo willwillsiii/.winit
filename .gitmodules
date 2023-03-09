@@ -122,9 +122,6 @@
 [submodule "vim/pack/colors/start/vim-colors_atelier-schemes"]
 	path = vim/pack/colors/start/vim-colors_atelier-schemes
 	url = git@github.com:atelierbram/vim-colors_atelier-schemes.git
-[submodule "vim/pack/plugins/start/vim-plugin-AnsiEsc"]
-	path = vim/pack/plugins/start/vim-plugin-AnsiEsc
-	url = git@github.com:powerman/vim-plugin-AnsiEsc.git
 [submodule "vim/pack/plugins/start/vim-commentary"]
 	path = vim/pack/plugins/start/vim-commentary
 	url = git@github.com:tpope/vim-commentary.git
