@@ -21,6 +21,9 @@ nnoremap <Leader>v<C-l> :VimuxClearTerminalScreen<CR>
 
 " Command-T
 let g:CommandTPreferredImplementation = 'ruby'
+nmap <silent> <Leader>t <Plug>(CommandT)
+nmap <silent> <Leader>b <Plug>(CommandTBuffer)
+nmap <silent> <Leader>j <Plug>(CommandTJump)
 
 " Mini Buffer Explorer
 let g:miniBufExplAutoStart = 1
