@@ -45,6 +45,12 @@ let g:easyescape_timeout = 100
 cnoremap ;l <ESC>
 "cnoremap l; <ESC>
 
+" Signify
+nmap <Leader>gj <Plug>(signify-next-hunk)
+nmap <Leader>gk <Plug>(signify-prev-hunk)
+nmap <Leader>gJ 9999<Leader>gj
+nmap <Leader>gK 9999<Leader>gk
+
 " Vim Markdown
 set conceallevel=2
 let g:vim_markdown_math = 1
@@ -98,6 +104,9 @@ au BufWritePost *.py call flake8#Flake8()
 " TeX settings
 let g:tex_flavor = 'latex'
 au FileType tex setl indentexpr=
+
+" man settings
+au FileType man setl nonumber
 
 " General settings
 set encoding=utf-8
