@@ -1,15 +1,92 @@
-" vim-airline settings
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'ayu_dark'
+" Important settings
+set nocompatible
+filetype indent plugin on
+" Setting syntax might cause vim to overwrite settings.
+" See: https://stackoverflow.com/questions/33380451/is-there-a-difference-between-syntax-on-and-syntax-enable-in-vimscript
+if !exists(g:syntax_on)
+    syntax enable
+endif
+" Modeline is disabled for security reasons.
+" See: https://security.stackexchange.com/questions/36001/vim-modeline-vulnerabilities
+set nomodeline
 
-" Jedi
-let g:jedi#popup_on_dot = 0
+" Vimux
+nnoremap <Leader>vp :VimuxPromptCommand<CR>
+nnoremap <Leader>vl :VimuxRunLastCommand<CR>
+nnoremap <Leader>vi :VimuxInspectRunner<CR>
+nnoremap <Leader>vq :VimuxCloseRunner<CR>
+nnoremap <Leader>vc :VimuxInterruptRunner<CR>
+nnoremap <Leader>vz :VimuxZoomRunner<CR>
+nnoremap <Leader>v<C-l> :VimuxClearTerminalScreen<CR>
+
+" Command-T
+let g:CommandTPreferredImplementation = 'ruby'
+
+" Mini Buffer Explorer
+let g:miniBufExplAutoStart = 1
+let g:miniBufExplBuffersNeeded = 2
+
+" Nerdtree
+nnoremap <Leader>f :NERDTreeToggle<CR>
+
+" Undotree
+nnoremap <Leader>u :UndotreeToggle<CR>
+
+" TaskList
+nmap <Leader>d <Plug>TaskList
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabContextDefaultCompletionType = '<C-X><C-O>'
 
+" EasyEscape
+let g:easyescape_chars = { ';': 1, 'l': 1 }
+let g:easyescape_timeout = 100
+cnoremap ;l <ESC>
+"cnoremap l; <ESC>
+
+" Signify
+nmap <Leader>gj <Plug>(signify-next-hunk)
+nmap <Leader>gk <Plug>(signify-prev-hunk)
+nmap <Leader>gJ 9999<Leader>gj
+nmap <Leader>gK 9999<Leader>gk
+
+" Vim Markdown
+set conceallevel=2
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_strikethrough = 1
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_autowrite = 0
+let g:vim_markdown_edit_url_in = 'vsplit'
+
+" Indent Guides
+au Filetype vim,python,sh :IndentGuidesEnable
+let g:indent_guides_color_change_percent = 4
+let g:indent_guides_guide_size = 2
+let g:indent_guides_start_level = 1
+
+" Jedi
+let g:jedi#popup_on_dot = 0
+
+" Pytest
+let g:pytest_executable = "/home/will/.pyenv/shims/pytest"
+" Invoke Pytest with :Pytest along with an argument:
+"     class, method, function, file, project
+" These actions can be bound like so:
+" nnoremap <silent><Leader>c <ESC>:Pytest file<CR>
+
+" Vim-cellmode
+let g:cellmode_default_mappings='0'
+let g:cellmode_tmux_sessionname=''
+let g:cellmode_tmux_windowname=''
+let g:cellmode_tmux_panenumber='0'
+
 " Python settings for *.py files
+" Some are redundant to allow changes to the general settings to not affect
+" python settings. 
 let g:python_recommended_style = 0
 au FileType python setl
     \ tabstop=8
@@ -21,36 +98,86 @@ au FileType python setl
     \ autoindent
     \ number
     \ fileformat=unix
+au FileType python nmap <buffer> <Leader>q :call flake8#Flake8()<CR>
+au BufWritePost *.py call flake8#Flake8()
 
 " TeX settings
 let g:tex_flavor = 'latex'
 au FileType tex setl indentexpr=
 
+" man settings
+au FileType man setl nonumber
+
 " General settings
 set encoding=utf-8
-syntax enable
+set hidden
+set wildmenu
+set showcmd
+set ignorecase
+set smartcase
+set backspace=indent,eol,start
+set autoindent
+set nostartofline
+set ruler
+"set confirm
+"set visualbell
+"set t_vb=
+"set mouse=a
+"set cmdheight=2
 set number
+set notimeout ttimeout ttimeoutlen=200
+"set pastetoggle=<C-P>
+set tabstop=8
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set foldlevel=99
+set wrap
+set linebreak
+set wildmenu
+set splitbelow
+set splitright
+
+" General bindings
+map Y y$
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-H> <C-W>h
+nnoremap <C-L> <C-W>l
+nnoremap <Space> za
+nnoremap <silent> vv <C-W>v
 
 " Colors
 set t_Co=256
 set background=dark
 let g:solarized_termcolors = 256
+"let ayucolor = 'light'
+"let ayucolor = 'mirage'
 let g:ayucolor = 'dark'
-"let ayucolor="mirage"
-"let ayucolor="light"
+let g:ayu_italic_comment = 0
+let g:ayu_sign_contrast = 1
+let g:ayu_extended_palette = 1
+" vim-airline settings
+let g:airline_powerline_fonts = 1
+"let g:airline_theme = 'ayu_light'
+"let g:airline_theme = 'ayu_mirage'
+let g:airline_theme = 'ayu_dark'
 " Inspect $TERM instad of t_Co as it works in neovim as well
 if &term =~ '256color'
     " Enable true (24-bit) colors instead of (8-bit) 256 colors.
     " :h true-color
     if has('termguicolors')
         " The next lines fix color problems when using tmux.
-        " See https://stackoverflow.com/questions/62071974/vim-termguicolors-with-xterm-true-color-still-causing-problems
+        " See: https://stackoverflow.com/questions/62071974/vim-termguicolors-with-xterm-true-color-still-causing-problems
         let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
         let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
         " The next line is required for most colorschemes to look nice,
         " but messes up the solarized colorscheme.
         set termguicolors
     endif
+    " Packadd required here
+    " See: https://github.com/Luxed/ayu-vim/issues/26
+    packadd ayu-vim
     colorscheme ayu
     "colorscheme jellybeans
     "colorscheme gruvbox
@@ -61,3 +188,10 @@ else
     colorscheme solarized
 endif
 
+function! SourceIfExists(file)
+    if filereadable(expand(a:file))
+        exe 'source' a:file
+    endif
+endfunction
+
+call SourceIfExists("~/.vimrc_local")

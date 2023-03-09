@@ -15,7 +15,8 @@
 	url = git@github.com:altercation/vim-colors-solarized.git
 [submodule "vim/pack/colors/start/ayu-vim"]
 	path = vim/pack/colors/start/ayu-vim
-	url = git@github.com:ayu-theme/ayu-vim.git
+	url = git@github.com:willwillsiii/ayu-vim.git
+	branch = tabline_with_original_colors
 [submodule "vim/pack/colors/start/Apprentice"]
 	path = vim/pack/colors/start/Apprentice
 	url = git@github.com:romainl/Apprentice.git
@@ -61,3 +62,71 @@
 [submodule "vim/pack/plugins/start/vim-unimpaired"]
 	path = vim/pack/plugins/start/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
+[submodule "vim/pack/plugins/start/vim-indent-guides"]
+	path = vim/pack/plugins/start/vim-indent-guides
+	url = git@github.com:preservim/vim-indent-guides.git
+[submodule "vim/pack/plugins/start/vim-signify"]
+	path = vim/pack/plugins/start/vim-signify
+	url = git@github.com:mhinz/vim-signify.git
+[submodule "vim/pack/plugins/start/vim-flake8"]
+	path = vim/pack/plugins/start/vim-flake8
+	url = git@github.com:nvie/vim-flake8.git
+[submodule "vim/pack/plugins/start/vim-git"]
+	path = vim/pack/plugins/start/vim-git
+	url = git@github.com:tpope/vim-git.git
+[submodule "vim/pack/plugins/start/pytest.vim"]
+	path = vim/pack/plugins/start/pytest.vim
+	url = git@github.com:alfredodeza/pytest.vim.git
+[submodule "vim/pack/plugins/start/vim-plugin-minibufexpl"]
+	path = vim/pack/plugins/start/vim-plugin-minibufexpl
+	url = git@github.com:weynhamz/vim-plugin-minibufexpl.git
+[submodule "vim/pack/plugins/start/vim-makegreen"]
+	path = vim/pack/plugins/start/vim-makegreen
+	url = git@github.com:reinh/vim-makegreen.git
+[submodule "vim/pack/plugins/start/pydoc.vim"]
+	path = vim/pack/plugins/start/pydoc.vim
+	url = git@github.com:fs111/pydoc.vim.git
+[submodule "vim/pack/plugins/start/undotree"]
+	path = vim/pack/plugins/start/undotree
+	url = git@github.com:mbbill/undotree.git
+[submodule "vim/pack/plugins/start/TaskList.vim"]
+	path = vim/pack/plugins/start/TaskList.vim
+	url = git@github.com:vim-scripts/TaskList.vim.git
+[submodule "vim/pack/plugins/start/nerdtree"]
+	path = vim/pack/plugins/start/nerdtree
+	url = git@github.com:preservim/nerdtree.git
+[submodule "vim/pack/plugins/start/nerdtree-buffer-ops"]
+	path = vim/pack/plugins/start/nerdtree-buffer-ops
+	url = git@github.com:PhilRunninger/nerdtree-buffer-ops.git
+[submodule "vim/pack/plugins/start/nerdtree-visual-selection"]
+	path = vim/pack/plugins/start/nerdtree-visual-selection
+	url = git@github.com:PhilRunninger/nerdtree-visual-selection.git
+[submodule "vim/pack/plugins/start/vim-tmux-navigator"]
+	path = vim/pack/plugins/start/vim-tmux-navigator
+	url = git@github.com:christoomey/vim-tmux-navigator.git
+[submodule "vim/pack/plugins/start/vim-markdown"]
+	path = vim/pack/plugins/start/vim-markdown
+	url = git@github.com:preservim/vim-markdown.git
+[submodule "vim/pack/plugins/start/vim-easyescape"]
+	path = vim/pack/plugins/start/vim-easyescape
+	url = git@github.com:zhou13/vim-easyescape.git
+[submodule "vim/pack/plugins/start/tabular"]
+	path = vim/pack/plugins/start/tabular
+	url = git@github.com:godlygeek/tabular.git
+[submodule "vim/pack/plugins/start/vimux"]
+	path = vim/pack/plugins/start/vimux
+	url = git@github.com:preservim/vimux.git
+[submodule "vim/pack/plugins/start/vim-cellmode"]
+	path = vim/pack/plugins/start/vim-cellmode
+	url = git@github.com:julienr/vim-cellmode.git
+[submodule "vim/pack/colors/start/vim-colors_atelier-schemes"]
+	path = vim/pack/colors/start/vim-colors_atelier-schemes
+	url = git@github.com:atelierbram/vim-colors_atelier-schemes.git
+[submodule "vim/pack/plugins/start/vim-commentary"]
+	path = vim/pack/plugins/start/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
+[submodule "vim/pack/plugins/start/markdown-preview.nvim"]
+	path = vim/pack/plugins/start/markdown-preview.nvim
+	url = git@github.com:iamcco/markdown-preview.nvim.git
+	branch = dependabot/npm_and_yarn/next-12.1.0
+	ignore = dirty
