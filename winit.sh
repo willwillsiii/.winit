@@ -1,11 +1,19 @@
 #!/bin/sh
 
+# Change to winit directory.
+# This assumes the script is still located
+# in the root of the winit repository.
 cd "$(dirname "$0")"
 
-run=true
-overwrite=false
-delete=false
-verbosity=1
+use_defaults () {
+
+    run=true
+    confirm=false
+    overwrite=false
+    revert=false
+    verbosity=1
+
+}
 
 # This is used to parse arguments.
 # TODO: perhaps use getopt(s) to do this.
@@ -14,17 +22,25 @@ while [ "$#" -ge 1 ]; do
         -q)
             verbosity=0
             ;;
+        -d)
+            use_defaults
+            ;;
         -v)
             verbosity=2
             ;;
-        # TODO: Add overwrite case (-f)
+        -c)
+            overwrite='confirm'
+            ;;
+        -f)
+            overwrite=true
+            ;;
         -s)
             run=false
             verbosity=2
             ;;
-        -d)
-            delete=true
-        # TODO: Add a confirm option
+        -r)
+            revert=true
+            ;;
         # TODO: Add cases for various configurations of plugins
     esac
     shift
@@ -94,6 +110,7 @@ safe_link () {
         fi
     else
         say "No link found at $dest"
+        # TODO: add more say commands for verbosity.
         run_cmd ln -sbf --suffix='.bak' "$src" "$dest"
     fi
 
@@ -101,7 +118,8 @@ safe_link () {
 
 # Use this to remove the links if the src and dest match
 # given arguments.
-safe_link_rm () {
+# TODO: add functionality to reinstate backed up files
+safe_link_revert () {
 
     src=$(realpath -s $1)
     dest=$(realpath -s $2)
@@ -110,10 +128,17 @@ safe_link_rm () {
 
     # TODO: rewrite to be more explicit about existing files.
     if [ "$src" = "$existing_src" ]; then
-        true
+        run_cmd rm "$dest"
     fi
 
 }
+
+if [ "$revert" = true ]; then
+    safe_link_revert "./.ssh/config" "${HOME}/.ssh/config"
+    safe_link_revert "./vim/vimrc" "${HOME}/.vimrc"
+    safe_link_revert "./tmux/tmux.conf" "${HOME}/.tmux.conf"
+    exit 0
+fi
 
 # TODO: rework to store these pairs in an iterable way
 safe_link "./.ssh/config" "${HOME}/.ssh/config"
