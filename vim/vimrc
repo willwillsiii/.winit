@@ -1,94 +1,68 @@
-" Important settings
-set nocompatible
-filetype off
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
+call plug#begin()
+" The default plugin directory will be as follows:
+"   - Vim (Linux/macOS): '~/.vim/plugged'
+"   - Vim (Windows): '~/vimfiles/plugged'
+"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
+" You can specify a custom plugin directory by passing it as the argument
+"   - e.g. `call plug#begin('~/.vim/plugged')`
+"   - Avoid using standard Vim directory names like 'plugin'
 
 " === Winit plugins ===
-Plugin 'romainl/Apprentice'
-Plugin 'willwillsiii/ayu-vim', {'pinned': 1}
-Plugin 'sjl/badwolf'
-Plugin 'morhetz/gruvbox'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'atelierbram/vim-colors_atelier-schemes'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/TaskList.vim'
-Plugin 'wincent/command-t'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'iamcco/markdown-preview.nvim', {'pinned': 1}
-Plugin 'preservim/nerdtree'
-Plugin 'PhilRunninger/nerdtree-buffer-ops'
-Plugin 'PhilRunninger/nerdtree-visual-selection'
-Plugin 'fs111/pydoc.vim'
-Plugin 'alfredodeza/pytest.vim'
-Plugin 'ervandew/supertab'
-Plugin 'godlygeek/tabular'
-Plugin 'tomtom/tlib_vim'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'mbbill/undotree'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'julienr/vim-cellmode'
-Plugin 'tpope/vim-commentary'
-Plugin 'zhou13/vim-easyescape'
-Plugin 'nvie/vim-flake8'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-git'
-Plugin 'preservim/vim-indent-guides'
-Plugin 'reinh/vim-makegreen'
-Plugin 'preservim/vim-markdown'
-Plugin 'weynhamz/vim-plugin-minibufexpl'
-Plugin 'mhinz/vim-signify'
-Plugin 'honza/vim-snippets'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-tbone'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'preservim/vimux'
+Plug 'romainl/Apprentice'
+Plug 'willwillsiii/ayu-vim', { 'branch': 'tabline_with_original_colors' }
+Plug 'sjl/badwolf'
+Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'atelierbram/vim-colors_atelier-schemes'
+Plug 'tmhedberg/SimpylFold'
+Plug 'vim-scripts/TaskList.vim'
+Plug 'wincent/command-t'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'iamcco/markdown-preview.nvim', { 'branch': 'dependabot/npm_and_yarn/next-12.1.0' }
+Plug 'preservim/nerdtree'
+Plug 'PhilRunninger/nerdtree-buffer-ops'
+Plug 'PhilRunninger/nerdtree-visual-selection'
+Plug 'fs111/pydoc.vim'
+Plug 'alfredodeza/pytest.vim'
+Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
+Plug 'tomtom/tlib_vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'SirVer/ultisnips'
+Plug 'mbbill/undotree'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'julienr/vim-cellmode'
+Plug 'tpope/vim-commentary'
+Plug 'zhou13/vim-easyescape'
+Plug 'nvie/vim-flake8'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'preservim/vim-indent-guides'
+Plug 'reinh/vim-makegreen'
+Plug 'preservim/vim-markdown'
+Plug 'weynhamz/vim-plugin-minibufexpl'
+Plug 'mhinz/vim-signify'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-tbone'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-unimpaired'
+Plug 'preservim/vimux'
 " =====================
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" Initialize plugin system
+" - Automatically executes `filetype plugin indent on` and `syntax enable`.
+call plug#end()
+" You can revert the settings after the call like so:
+"   filetype indent off   " Disable file-type-specific indentation
+"   syntax off            " Disable syntax highlighting
 
+" Important settings
+set nocompatible
 " Setting syntax might cause vim to overwrite settings.
 " See: https://stackoverflow.com/questions/33380451/is-there-a-difference-between-syntax-on-and-syntax-enable-in-vimscript
 if !exists(g:syntax_on)

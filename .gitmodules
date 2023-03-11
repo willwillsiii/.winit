@@ -1,138 +1,135 @@
-[submodule "vim/bundle/Vundle.vim"]
-	path = vim/bundle/Vundle.vim
-	url = git@github.com:VundleVim/Vundle.vim.git
 [submodule "vim/bundle/ayu-vim"]
-	path = vim/bundle/ayu-vim
+	path = vim/plugged/ayu-vim
 	url = git@github.com:willwillsiii/ayu-vim.git
         branch = tabline_with_original_colors
 [submodule "vim/bundle/markdown-preview.nvim"]
-	path = vim/bundle/markdown-preview.nvim
+	path = vim/plugged/markdown-preview.nvim
 	url = https://github.com/iamcco/markdown-preview.nvim.git
 	branch = dependabot/npm_and_yarn/next-12.1.0
 	ignore = dirty
 [submodule "vim/bundle/Apprentice"]
-	path = vim/bundle/Apprentice
+	path = vim/plugged/Apprentice
 	url = https://github.com/romainl/Apprentice.git
 [submodule "vim/bundle/badwolf"]
-	path = vim/bundle/badwolf
+	path = vim/plugged/badwolf
 	url = https://github.com/sjl/badwolf.git
 [submodule "vim/bundle/command-t"]
-	path = vim/bundle/command-t
+	path = vim/plugged/command-t
 	url = https://github.com/wincent/command-t.git
 [submodule "vim/bundle/gruvbox"]
-	path = vim/bundle/gruvbox
+	path = vim/plugged/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
 [submodule "vim/bundle/indentpython.vim"]
-	path = vim/bundle/indentpython.vim
+	path = vim/plugged/indentpython.vim
 	url = https://github.com/vim-scripts/indentpython.vim.git
 [submodule "vim/bundle/jedi-vim"]
-	path = vim/bundle/jedi-vim
+	path = vim/plugged/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
 [submodule "vim/bundle/jellybeans.vim"]
-	path = vim/bundle/jellybeans.vim
+	path = vim/plugged/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim.git
 [submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
+	path = vim/plugged/nerdtree
 	url = https://github.com/preservim/nerdtree.git
 [submodule "vim/bundle/nerdtree-buffer-ops"]
-	path = vim/bundle/nerdtree-buffer-ops
+	path = vim/plugged/nerdtree-buffer-ops
 	url = https://github.com/PhilRunninger/nerdtree-buffer-ops.git
 [submodule "vim/bundle/nerdtree-visual-selection"]
-	path = vim/bundle/nerdtree-visual-selection
+	path = vim/plugged/nerdtree-visual-selection
 	url = https://github.com/PhilRunninger/nerdtree-visual-selection.git
 [submodule "vim/bundle/pydoc.vim"]
-	path = vim/bundle/pydoc.vim
+	path = vim/plugged/pydoc.vim
 	url = https://github.com/fs111/pydoc.vim.git
 [submodule "vim/bundle/pytest.vim"]
-	path = vim/bundle/pytest.vim
+	path = vim/plugged/pytest.vim
 	url = https://github.com/alfredodeza/pytest.vim.git
 [submodule "vim/bundle/SimpylFold"]
-	path = vim/bundle/SimpylFold
+	path = vim/plugged/SimpylFold
 	url = https://github.com/tmhedberg/SimpylFold.git
 [submodule "vim/bundle/supertab"]
-	path = vim/bundle/supertab
+	path = vim/plugged/supertab
 	url = https://github.com/ervandew/supertab.git
 [submodule "vim/bundle/tabular"]
-	path = vim/bundle/tabular
+	path = vim/plugged/tabular
 	url = https://github.com/godlygeek/tabular.git
 [submodule "vim/bundle/TaskList.vim"]
-	path = vim/bundle/TaskList.vim
+	path = vim/plugged/TaskList.vim
 	url = https://github.com/vim-scripts/TaskList.vim.git
 [submodule "vim/bundle/tlib_vim"]
-	path = vim/bundle/tlib_vim
+	path = vim/plugged/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
 [submodule "vim/bundle/tmuxline.vim"]
-	path = vim/bundle/tmuxline.vim
+	path = vim/plugged/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim.git
 [submodule "vim/bundle/ultisnips"]
-	path = vim/bundle/ultisnips
+	path = vim/plugged/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
 [submodule "vim/bundle/undotree"]
-	path = vim/bundle/undotree
+	path = vim/plugged/undotree
 	url = https://github.com/mbbill/undotree.git
 [submodule "vim/bundle/vim-addon-mw-utils"]
-	path = vim/bundle/vim-addon-mw-utils
+	path = vim/plugged/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "vim/bundle/vim-airline"]
-	path = vim/bundle/vim-airline
+	path = vim/plugged/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
 [submodule "vim/bundle/vim-airline-themes"]
-	path = vim/bundle/vim-airline-themes
+	path = vim/plugged/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "vim/bundle/vim-cellmode"]
-	path = vim/bundle/vim-cellmode
+	path = vim/plugged/vim-cellmode
 	url = https://github.com/julienr/vim-cellmode.git
 [submodule "vim/bundle/vim-colors_atelier-schemes"]
-	path = vim/bundle/vim-colors_atelier-schemes
+	path = vim/plugged/vim-colors_atelier-schemes
 	url = https://github.com/atelierbram/vim-colors_atelier-schemes.git
 [submodule "vim/bundle/vim-colors-solarized"]
-	path = vim/bundle/vim-colors-solarized
+	path = vim/plugged/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/vim-commentary"]
-	path = vim/bundle/vim-commentary
+	path = vim/plugged/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
 [submodule "vim/bundle/vim-easyescape"]
-	path = vim/bundle/vim-easyescape
+	path = vim/plugged/vim-easyescape
 	url = https://github.com/zhou13/vim-easyescape.git
 [submodule "vim/bundle/vim-flake8"]
-	path = vim/bundle/vim-flake8
+	path = vim/plugged/vim-flake8
 	url = https://github.com/nvie/vim-flake8.git
 [submodule "vim/bundle/vim-fugitive"]
-	path = vim/bundle/vim-fugitive
+	path = vim/plugged/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/vim-git"]
-	path = vim/bundle/vim-git
+	path = vim/plugged/vim-git
 	url = https://github.com/tpope/vim-git.git
 [submodule "vim/bundle/vim-indent-guides"]
-	path = vim/bundle/vim-indent-guides
+	path = vim/plugged/vim-indent-guides
 	url = https://github.com/preservim/vim-indent-guides.git
 [submodule "vim/bundle/vim-makegreen"]
-	path = vim/bundle/vim-makegreen
+	path = vim/plugged/vim-makegreen
 	url = https://github.com/reinh/vim-makegreen.git
 [submodule "vim/bundle/vim-markdown"]
-	path = vim/bundle/vim-markdown
+	path = vim/plugged/vim-markdown
 	url = https://github.com/preservim/vim-markdown.git
 [submodule "vim/bundle/vim-plugin-minibufexpl"]
-	path = vim/bundle/vim-plugin-minibufexpl
+	path = vim/plugged/vim-plugin-minibufexpl
 	url = https://github.com/weynhamz/vim-plugin-minibufexpl.git
 [submodule "vim/bundle/vim-signify"]
-	path = vim/bundle/vim-signify
+	path = vim/plugged/vim-signify
 	url = https://github.com/mhinz/vim-signify.git
 [submodule "vim/bundle/vim-snippets"]
-	path = vim/bundle/vim-snippets
+	path = vim/plugged/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
 [submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
+	path = vim/plugged/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 [submodule "vim/bundle/vim-tmux-navigator"]
-	path = vim/bundle/vim-tmux-navigator
+	path = vim/plugged/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
 [submodule "vim/bundle/vim-unimpaired"]
-	path = vim/bundle/vim-unimpaired
+	path = vim/plugged/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
 [submodule "vim/bundle/vimux"]
-	path = vim/bundle/vimux
+	path = vim/plugged/vimux
 	url = https://github.com/preservim/vimux.git
 [submodule "vim/bundle/vim-tbone"]
-	path = vim/bundle/vim-tbone
+	path = vim/plugged/vim-tbone
 	url = https://github.com/tpope/vim-tbone.git
