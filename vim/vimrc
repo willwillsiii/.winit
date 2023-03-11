@@ -19,8 +19,8 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'vim-scripts/TaskList.vim'
 Plug 'wincent/command-t'
 Plug 'vim-scripts/indentpython.vim'
-Plug 'davidhalter/jedi-vim'
-Plug 'iamcco/markdown-preview.nvim', { 'branch': 'dependabot/npm_and_yarn/next-12.1.0' }
+"Plug 'davidhalter/jedi-vim'
+"Plug 'iamcco/markdown-preview.nvim', { 'branch': 'dependabot/npm_and_yarn/next-12.1.0' }
 Plug 'preservim/nerdtree'
 Plug 'PhilRunninger/nerdtree-buffer-ops'
 Plug 'PhilRunninger/nerdtree-visual-selection'
@@ -30,7 +30,7 @@ Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'tomtom/tlib_vim'
 Plug 'edkolev/tmuxline.vim'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'mbbill/undotree'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'vim-airline/vim-airline'
@@ -41,7 +41,7 @@ Plug 'zhou13/vim-easyescape'
 Plug 'nvie/vim-flake8'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
-Plug 'preservim/vim-indent-guides'
+"Plug 'preservim/vim-indent-guides'
 Plug 'reinh/vim-makegreen'
 Plug 'preservim/vim-markdown'
 Plug 'weynhamz/vim-plugin-minibufexpl'
@@ -51,7 +51,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-tbone'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-unimpaired'
-Plug 'preservim/vimux'
+"Plug 'preservim/vimux'
 " =====================
 
 " Initialize plugin system
@@ -106,7 +106,7 @@ let g:SuperTabContextDefaultCompletionType = '<C-X><C-O>'
 
 " EasyEscape
 let g:easyescape_chars = { ';': 1, 'l': 1 }
-let g:easyescape_timeout = 100
+let g:easyescape_timeout = 2000
 cnoremap ;l <ESC>
 "cnoremap l; <ESC>
 
@@ -131,7 +131,7 @@ let g:vim_markdown_autowrite = 0
 let g:vim_markdown_edit_url_in = 'vsplit'
 
 " Indent Guides
-au Filetype vim,python,sh :IndentGuidesEnable
+"au Filetype vim,python,sh :IndentGuidesEnable
 let g:indent_guides_color_change_percent = 4
 let g:indent_guides_guide_size = 2
 let g:indent_guides_start_level = 1
