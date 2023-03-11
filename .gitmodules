@@ -1,9 +1,6 @@
 [submodule "vim/pack/plugins/start/vim-fugitive"]
 	path = vim/pack/plugins/start/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
-[submodule "vim/pack/plugins/start/command-t"]
-	path = vim/pack/plugins/start/command-t
-	url = git@github.com:wincent/command-t.git
 [submodule "vim/pack/plugins/start/SimpylFold"]
 	path = vim/pack/plugins/start/SimpylFold
 	url = git@github.com:tmhedberg/SimpylFold.git
@@ -113,9 +110,6 @@
 [submodule "vim/pack/plugins/start/tabular"]
 	path = vim/pack/plugins/start/tabular
 	url = git@github.com:godlygeek/tabular.git
-[submodule "vim/pack/plugins/start/vimux"]
-	path = vim/pack/plugins/start/vimux
-	url = git@github.com:preservim/vimux.git
 [submodule "vim/pack/plugins/start/vim-cellmode"]
 	path = vim/pack/plugins/start/vim-cellmode
 	url = git@github.com:julienr/vim-cellmode.git
@@ -130,6 +124,3 @@
 	url = git@github.com:iamcco/markdown-preview.nvim.git
 	branch = dependabot/npm_and_yarn/next-12.1.0
 	ignore = dirty
-[submodule "vim/pack/plugins/start/vim-tbone"]
-	path = vim/pack/plugins/start/vim-tbone
-	url = git@github.com:tpope/vim-tbone.git
