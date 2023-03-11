@@ -143,6 +143,7 @@ set linebreak
 set wildmenu
 set splitbelow
 set splitright
+set diffopt+=vertical
 
 " General bindings
 map Y y$
