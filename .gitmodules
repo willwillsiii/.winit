@@ -130,3 +130,6 @@
 	url = git@github.com:iamcco/markdown-preview.nvim.git
 	branch = dependabot/npm_and_yarn/next-12.1.0
 	ignore = dirty
+[submodule "vim/bundle/Vundle.vim"]
+	path = vim/bundle/Vundle.vim
+	url = git@github.com:VundleVim/Vundle.vim
