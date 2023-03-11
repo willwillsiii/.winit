@@ -50,6 +50,9 @@ nmap <Leader>gj <Plug>(signify-next-hunk)
 nmap <Leader>gk <Plug>(signify-prev-hunk)
 nmap <Leader>gJ 9999<Leader>gj
 nmap <Leader>gK 9999<Leader>gk
+nnoremap <leader>gd :SignifyDiff<cr>
+nnoremap <leader>gp :SignifyHunkDiff<cr>
+nnoremap <leader>gu :SignifyHunkUndo<cr>
 
 " Vim Markdown
 set conceallevel=2
@@ -151,8 +154,8 @@ nnoremap <silent> vv <C-W>v
 set t_Co=256
 set background=dark
 let g:solarized_termcolors = 256
-"let ayucolor = 'light'
-"let ayucolor = 'mirage'
+"let g:ayucolor = 'light'
+"let g:ayucolor = 'mirage'
 let g:ayucolor = 'dark'
 let g:ayu_italic_comment = 0
 let g:ayu_sign_contrast = 1
