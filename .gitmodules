@@ -1,9 +1,6 @@
 [submodule "vim/pack/plugins/start/vim-fugitive"]
 	path = vim/pack/plugins/start/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
-[submodule "vim/pack/plugins/start/command-t"]
-	path = vim/pack/plugins/start/command-t
-	url = git@github.com:wincent/command-t.git
 [submodule "vim/pack/plugins/start/SimpylFold"]
 	path = vim/pack/plugins/start/SimpylFold
 	url = git@github.com:tmhedberg/SimpylFold.git
@@ -29,9 +26,6 @@
 [submodule "vim/pack/colors/start/gruvbox"]
 	path = vim/pack/colors/start/gruvbox
 	url = git@github.com:morhetz/gruvbox.git
-[submodule "vim/pack/plugins/start/jedi-vim"]
-	path = vim/pack/plugins/start/jedi-vim
-	url = git@github.com:davidhalter/jedi-vim.git
 [submodule "vim/pack/plugins/start/vim-addon-mw-utils"]
 	path = vim/pack/plugins/start/vim-addon-mw-utils
 	url = git@github.com:MarcWeber/vim-addon-mw-utils.git
