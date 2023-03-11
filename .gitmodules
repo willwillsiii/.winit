@@ -133,3 +133,6 @@
 [submodule "vim/bundle/vimux"]
 	path = vim/bundle/vimux
 	url = https://github.com/preservim/vimux.git
+[submodule "vim/bundle/vim-tbone"]
+	path = vim/bundle/vim-tbone
+	url = https://github.com/tpope/vim-tbone.git
