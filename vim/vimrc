@@ -270,17 +270,20 @@ if &term =~ '256color'
         " The next line is required for most colorschemes to look nice,
         " but messes up the solarized colorscheme.
         set termguicolors
+        " Packadd required here
+        " See: https://github.com/Luxed/ayu-vim/issues/26
+        "packadd ayu-vim
+        colorscheme ayu
+        "colorscheme jellybeans
+        "colorscheme gruvbox
+        "colorscheme badwolf
+        "colorscheme apprentice
+    else
+        " Fallback to solarized if termguicolors can't be set.
+        colorscheme solarized
     endif
-    " Packadd required here
-    " See: https://github.com/Luxed/ayu-vim/issues/26
-    "packadd ayu-vim
-    colorscheme ayu
-    "colorscheme jellybeans
-    "colorscheme gruvbox
-    "colorscheme badwolf
-    "colorscheme apprentice
 else
-    " Fallback to solarized if termguicolors can't be set.
+    " Fallback to solarized if terminal isn't 256-color.
     colorscheme solarized
 endif
 
