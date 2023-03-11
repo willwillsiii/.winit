@@ -5,3 +5,8 @@
         path = vim/bundle/ayu-vim
         url = git@github.com:willwillsiii/ayu-vim.git
         branch = tabline_with_original_colors
+[submodule "vim/bundle/markdown-preview.nvim"]
+	path = vim/bundle/markdown-preview.nvim
+	url = git@github.com:iamcco/markdown-preview.nvim.git
+	branch = dependabot/npm_and_yarn/next-12.1.0
+	ignore = dirty

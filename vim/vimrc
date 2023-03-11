@@ -40,7 +40,7 @@ Plugin 'vim-scripts/TaskList.vim'
 Plugin 'wincent/command-t'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'iamcco/markdown-preview.nvim'
+Plugin 'iamcco/markdown-preview.nvim', {'pinned': 1}
 Plugin 'preservim/nerdtree'
 Plugin 'PhilRunninger/nerdtree-buffer-ops'
 Plugin 'PhilRunninger/nerdtree-visual-selection'
